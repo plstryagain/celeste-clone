@@ -1,3 +1,5 @@
+#include "logger.h"
+
 #include <string>
 
 static bool running = true;
@@ -88,6 +90,9 @@ int main()
     }
     while (running) {
         platform_update_window();
+        plstryagain::log::err("Test");
+        plstryagain::log::warn("Test");
+        plstryagain::log::trace("Test");
     }
     return 0;
 }
